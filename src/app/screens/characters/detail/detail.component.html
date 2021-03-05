@@ -1,0 +1,38 @@
+<section class="detail-character">
+  <div class="content-character">
+    <section class="image-header" [style.background-image]="'url(' + dataCharacter?.thumbnail.path +'.jpg)'">
+     <div class="bg-cover">
+       <h1>{{dataCharacter?.name}}</h1>
+
+       <p>
+         {{dataCharacter?.description}}
+       </p>
+     </div>
+    </section>
+  </div>
+
+  <div *ngIf="isLoading" class="info-character">
+    <div class="content-img loading-on-element-custom"></div>
+
+    <div class="content-info">
+      <p class="loading-on-element-custom"></p>
+      <p class="loading-on-element-custom"></p>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading" class="info-character">
+    <div class="content-img">
+      <img src={{dataCharacter?.thumbnail.path}}.{{dataCharacter?.thumbnail.extension}} alt="{{dataCharacter?.name}}">
+    </div>
+
+    <div class="content-info">
+      <h1>{{dataCharacter?.name}}</h1>
+
+      <p>
+        {{dataCharacter?.description}}
+      </p>
+
+      <a routerLink="/personagens/lista">Voltar</a>
+    </div>
+  </div>
+</section>

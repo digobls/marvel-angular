@@ -1,0 +1,14 @@
+<div class="card-character">
+  <a routerLink="/personagens/detalhes/{{character.id}}">
+    <div class="thumb">
+      <img src={{character.thumbnail.path}}.{{character.thumbnail.extension}} alt="{{character.name}}">
+    </div>
+    <div class="card-info">
+      <h3>{{character.name}}</h3>
+
+      <p>
+        {{character.description}}
+      </p>
+    </div>
+  </a>
+</div>

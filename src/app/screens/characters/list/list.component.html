@@ -1,0 +1,9 @@
+<section>
+  <section class="header">
+    <h1>Lista de personagens</h1>
+  </section>
+
+  <div class="content-list">
+    <app-character-card [character]="c" *ngFor="let c  of listCharacters"></app-character-card>
+  </div>
+</section>
